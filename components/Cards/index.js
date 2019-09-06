@@ -26,11 +26,12 @@ axios
     const data = response.data;
     const articles = data.articles;
     const info = Object.values(articles);
-    const addInfo = [''];
+    const addInfo = [];
     console.log(info.length)
-    
+
     for (var i = 0; i < info.length; i++){
-        addInfo.push(info[i][i])
+        for (var n = 0; n < info[i].length; n++)
+        addInfo.push(info[i][n])
         console.log(addInfo)
     }
     addInfo.forEach(item => {
@@ -39,7 +40,6 @@ axios
     })
 
 })
-
 function card(obj){
     const
     newCard = document.createElement('div');
